@@ -5,7 +5,7 @@ import "./globals.css";
 const manrope = Manrope({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Create Next App",
+  title: "Gpt-3",
   description: `
   Let’s Build Something
   amazing with GPT-3
