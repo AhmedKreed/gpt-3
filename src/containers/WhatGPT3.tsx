@@ -1,11 +1,4 @@
 import Feature from "@/components/Feature";
-declare global {
-  namespace JSX {
-    interface IntrinsicElements {
-      page: any;
-    }
-  }
-}
 const WhatGPT3 = () => {
   const features = [
     {
