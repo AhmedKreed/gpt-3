@@ -20,29 +20,35 @@ const Features = () => {
     },
   ];
   return (
-    <section className="section mb-11" id="Features">
-      <div className="flex max-lg:flex-wrap justify-between gap-11 max-lg:justify-center">
-        <div className="max-w-[462px]">
-          <h1 className="text-gradient font-extrabold text-3xl sm:text-4xl leading-[45px] mb-8 max-lg:text-center">
-            The Future is Now and You Just Need To Realize It. Step into Future
-            Today & Make it Happen.
-          </h1>
-          <p className="text-sub-text max-lg:text-center mb-5">
-            Request Early Access to Get Started
-          </p>
+    <page id="Features" name="Features">
+      <section className="section mb-11">
+        <div className="flex max-lg:flex-wrap justify-between gap-11 max-lg:justify-center">
+          <div className="max-w-[462px]">
+            <h1 className="text-gradient font-extrabold text-3xl sm:text-4xl leading-[45px] mb-8 max-lg:text-center">
+              The Future is Now and You Just Need To Realize It. Step into
+              Future Today & Make it Happen.
+            </h1>
+            <p className="text-sub-text max-lg:text-center mb-5">
+              Request Early Access to Get Started
+            </p>
+          </div>
+          <div className="flex flex-col gap-8">
+            {features.map((feature) => (
+              <div
+                key={feature.title}
+                className="flex justify-between sm:w-[590px] first max-sm:flex-wrap max-sm:gap-10 max-sm:text-center max-sm:justify-center"
+              >
+                <Feature
+                  title={feature.title}
+                  text={feature.text}
+                  font={false}
+                />
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-col gap-8">
-          {features.map((feature) => (
-            <div
-              key={feature.title}
-              className="flex justify-between sm:w-[590px] first max-sm:flex-wrap max-sm:gap-10 max-sm:text-center max-sm:justify-center"
-            >
-              <Feature title={feature.title} text={feature.text} font={false} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
+      </section>
+    </page>
   );
 };
 
